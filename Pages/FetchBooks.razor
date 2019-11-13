@@ -1,0 +1,64 @@
+﻿@page "/fetchbooks"
+@inject HttpClient Http
+
+<h3>Books</h3>
+<p>Here are the books</p>
+
+@if(books == null){
+    <p><em>Loading...</em></p>
+}
+else
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                ISBN
+            </th>
+            <th>
+                Publish Date
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in books)
+        {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author</td>
+            <td>@book.ISBN</td>
+            <td>@book.PublishDateView</td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+}
+
+
+@code {
+        List<Book> books;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await Http.GetJsonAsync<List<Book>>("sample-data/books.json");
+    }
+
+    public class Book
+    {
+        public string Title { get; set; }
+        public string Publisher { get; set; }
+        public DateTime PublishDate { get; set; }
+        public string PublishDateView { 
+            get { return PublishDate.ToShortDateString(); } 
+        }
+        public string Author { get; set; }
+        public string ISBN { get; set; }
+    }
+}

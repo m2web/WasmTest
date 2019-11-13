@@ -1,0 +1,32 @@
+﻿[
+  {
+    "title": "The Shining",
+    "author": "Steven King",
+    "isbn": "9780307743657",
+    "publishDate": "1977-01-28"
+  },
+  {
+    "title": "Hitchhikers Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "isbn": "9780345391803",
+    "publishDate": "1979-10-12"
+  },
+  {
+    "title": "Primal Scream",
+    "author": "Mary Eberstadt",
+    "isbn": "9781599474113",
+    "publishDate": "2019-08-05"
+  },
+  {
+    "title": "More from Less",
+    "author": "Andrews McAfee",
+    "isbn": "9781982103576",
+    "publishDate": "2019-10-08"
+  },
+  {
+    "title": "The Madness of Crowds",
+    "author": "Douglas Murray",
+    "isbn": "9781635579987",
+    "publishDate": "2019-09-17"
+  }
+]
